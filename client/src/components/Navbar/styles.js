@@ -21,6 +21,7 @@ export default makeStyles((theme) => ({
         width: '3rem'
     },
     search: {
+        marginRight: "1rem",
         position: 'relative',
         borderRadius: theme.shape.borderRadius,
         backgroundColor: fade(theme.palette.common.white, 0.15),

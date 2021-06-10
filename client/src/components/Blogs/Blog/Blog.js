@@ -21,7 +21,7 @@ const Blog = ({ user, blog, setCurrentId, prefersDarkMode, setCurrentBlog }) => 
 
     useEffect(() => {
         if(!avatarColor) setAvatarColor(randomColor());
-    },[]);
+    });
 
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);

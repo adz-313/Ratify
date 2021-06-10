@@ -8,7 +8,6 @@ import Brightness4Icon from '@material-ui/icons/Brightness4';
 import DehazeIcon from '@material-ui/icons/Dehaze';
 import SearchIcon from '@material-ui/icons/Search';
 import { randomColor } from '../../constants/randomColor';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import useStyles from './styles';
 import { LOGOUT } from '../../constants/actionTypes';
