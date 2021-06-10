@@ -1,6 +1,6 @@
 # Ratify
 
-**Ratify is now live. To visit, click [here](https://ratify.netlify.app/)**
+**Ratify is now live. To visit, click [here](https://ratify.netlify.app/).**
 
 ## What is Ratify?
 Ratify is a product review and recommendation website. It aims to provide unbiased and unopinionated reivews of latest products to people in short and concise manner.
