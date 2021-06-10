@@ -35,7 +35,7 @@ Ratify is a product review and recommendation website. It aims to provide unbias
 
 ### Database: 
 
-![image](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+![image](https://img.shields.io/badge/MongoDB-white?style=for-the-badge&logo=mongodb&logoColor=4EA94B)
 
 ### Additional framworks:
 1. To create blogs: 
