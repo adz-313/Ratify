@@ -15,7 +15,7 @@ Ratify is a product review and recommendation website. It aims to provide unbias
 * To create a blog or add a review about a product, simply register or use google login.
 
 ## Ratify Features:
-* Easy authentication using **Google OAuth**.
+* Passwordless authentication using **Google OAuth**.
 * Quick search and Product tags to find the blog you need.
 * **Markdown support** for blog creation.
 * **Dark mode** for improved user experience.
