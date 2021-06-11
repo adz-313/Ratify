@@ -12,7 +12,7 @@ const TopPicks = ({ setCurrentBlog }) => {
     const classes = useStyles();
     return (
         <Grid container className={classes.container}>
-            <Grid lg={12} sm={6} xs={12}>
+            <Grid>
             {topPicks.map(tp => <TopPick setCurrentBlog={setCurrentBlog} topPick={tp} />)}
             </Grid>
         </Grid>

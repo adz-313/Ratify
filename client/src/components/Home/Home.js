@@ -21,10 +21,10 @@ const Home = ({ user, setCurrentId, prefersDarkMode, setCurrentBlog, currentCat,
     return (
         <Container>
             <Grid container>
-                <Grid item lg={8} md={12} sm={12}>
+                <Grid item lg={8} sm={12}>
                     <Blogs searchResult={searchResult} currentCat={currentCat}  setCurrentBlog={setCurrentBlog} prefersDarkMode={prefersDarkMode} user={user} setCurrentId={setCurrentId}/>
                 </Grid>
-                <Grid item lg={4} md={12} sm={12}>
+                <Grid item lg={4} sm={12}>
                     <Typography variant="h4" className={classes.header}>Top Picks</Typography>
                     <TopPicks setCurrentBlog={setCurrentBlog}/>
                 </Grid>

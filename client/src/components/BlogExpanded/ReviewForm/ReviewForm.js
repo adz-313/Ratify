@@ -35,7 +35,7 @@ const ReviewForm = ({ user, pid }) => {
             <Typography className={classes.header} variant='h6'>Add your rating here</Typography>
             <form autoComplete="off" noValidate onSubmit={handleSubmit}>
                 <Grid container>
-                    <Grid sm={12} md={10} className={classes.gutter}>  
+                    <Grid lg={10} md={9} sm={7} xs={12} className={classes.input} className={classes.gutter}>  
                         <TextField 
                             variant='outlined'
                             fullWidth
@@ -45,7 +45,7 @@ const ReviewForm = ({ user, pid }) => {
                             onChange={(e) => setFormData({...formData, comment: e.target.value})}
                         />  
                     </Grid>
-                    <Grid sm={12} md={2} className={classes.gutter}>
+                    <Grid lg={2} className={classes.rating} className={classes.gutter}>
                         <Typography>Rating:</Typography>
                         <Rating 
                             name="rating"
@@ -55,6 +55,9 @@ const ReviewForm = ({ user, pid }) => {
                             }}
                         />
                     </Grid>
+                    {/* <Grid className={classes.button}>
+                        <Button disabled={!user?.result} type="submit" >Submit</Button>
+                    </Grid> */}
                 </Grid>
                 <div className={classes.button}>
                     <Button disabled={!user?.result} type="submit" >Submit</Button>

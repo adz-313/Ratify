@@ -32,4 +32,9 @@ export default makeStyles((theme) => ({
     header: {
       margin: theme.spacing(3, 2)
     },
+    topPicks: {
+      [theme.breakpoints.down("md")]: {
+        display: "none"
+      }
+    }
   }));

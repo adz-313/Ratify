@@ -4,21 +4,30 @@ export default makeStyles((theme) => ({
     appName: {
         textDecoration: "none",
         color: theme.palette.primary.contrastText,
-        marginRight: theme.spacing(2)
+        marginRight: theme.spacing(2),
+        [theme.breakpoints.down("sm")]: {
+            display: "none"
+        }
     },
     iconBtn: {
         color: theme.palette.primary.contrastText,
-        marginRight: theme.spacing(1)
+        marginRight: theme.spacing(1),
     },
     btnSignin: {
         color: theme.palette.primary.contrastText,
+        [theme.breakpoints.down("xs")]: {
+            fontSize: '12px'
+        }
     },
     mr: {
         marginRight: "1rem"
     },
     navLogo: {
         marginRight: "auto",
-        width: '3rem'
+        width: '3rem',
+        [theme.breakpoints.down("xs")]: {
+            display: "none"
+        }
     },
     search: {
         marginRight: "1rem",

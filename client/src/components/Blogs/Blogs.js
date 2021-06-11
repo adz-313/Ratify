@@ -7,8 +7,6 @@ import Blog from './Blog/Blog';
 
 const Blogs = ({ user, setCurrentId, prefersDarkMode, setCurrentBlog, currentCat, searchResult }) => {
     const products = useSelector((state) => currentCat === 'All' ? state.products : state.products.filter(prod => prod.category === currentCat));
-
-    console.log(searchResult);
             
     const searchedProducts = useSelector((state) => state.products.filter(prod => prod.tags.find(tag => tag.search(searchResult) !== -1)));
 

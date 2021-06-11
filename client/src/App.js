@@ -88,9 +88,9 @@ const App = () => {
                 <Switch>
                     <Route path="/login" exact component={Login} />
                     <Route path="/register" exact component={Register} />
-                    <Route path="/" exact component={() => (<Home searchResult={searchResult} currentCat={currentCat} setCurrentCat={setCurrentCat} drawerState={drawerState} setDrawerState={setDrawerState} user={user} setCurrentId={setCurrentId} prefersDarkMode={prefersDarkMode} setCurrentBlog={setCurrentBlog}/>)} />
-                    <Route path="/form" exact component={() => (<Form setDrawerState={setDrawerState} user={user} setCurrentId={setCurrentId} currentId={currentId} />)} />
-                    <Route path="/blog" exact component={() => (<BlogExpanded setDrawerState={setDrawerState} currentBlog={currentBlog} setCurrentBlog={setCurrentBlog} user={user} />)} />
+                    <Route path="/" exact component={() => (<Home searchResult={searchResult} currentCat={currentCat} user={user} setCurrentId={setCurrentId} prefersDarkMode={prefersDarkMode} setCurrentBlog={setCurrentBlog}/>)} />
+                    <Route path="/form" exact component={() => (<Form user={user} setCurrentId={setCurrentId} currentId={currentId} />)} />
+                    <Route path="/blog" exact component={() => (<BlogExpanded currentBlog={currentBlog} setCurrentBlog={setCurrentBlog} user={user} />)} />
                 </Switch>
             </Container>
             <Footer />

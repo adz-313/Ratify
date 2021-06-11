@@ -95,13 +95,13 @@ const BlogExpanded = ({ user, currentBlog, setCurrentBlog }) => {
           <Grid item lg={8} md={12} sm={12}>
               <ReactMarkdown allowedElements={["h1", "p", "h2", "h3", "hr", "strong", "em", "ul", "ol", "li" ]}  children={blog.description} />
           </Grid>
-          <Grid item lg={4} md={12} sm={12}>
+          <Grid item lg={4} md={12} sm={12} className={classes.topPicks}>
               <Typography variant="h4" className={classes.header} >Top Picks</Typography>
               <TopPicks setCurrentBlog={setCurrentBlog} />
           </Grid>
       </Grid>
       <Grid container>
-        <Grid item sm={8}>
+        <Grid item lg={8} xs={12}>
           <Bar
             data={bar}
             options={{

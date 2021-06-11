@@ -9,5 +9,5 @@ export default makeStyles(theme => ({
     },
     button: {
         padding: theme.spacing(0, 0, 2, 2)
-    }
+    },
 }));
