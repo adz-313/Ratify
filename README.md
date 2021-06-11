@@ -21,6 +21,7 @@ Ratify is a product review and recommendation website. It aims to provide unbias
 * **Dark mode** for improved user experience.
 * Simple navigation and clean layout.
 * Top Picks to display highest rated blogs.
+* **Responsive design** for comfortable reading across various screen sizes. 
 * Product statistics generated for each product using **Chart.js**.
 * Categorize products according to your preferences.
 
