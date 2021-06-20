@@ -21,6 +21,7 @@ const Blogs = ({ user, setCurrentId, prefersDarkMode, setCurrentBlog, currentCat
             <Grid className={classes.spinner} container justify='center' alignItems='center'>
                 <Grid item>
                     <CircularProgress /> 
+                    <Typography>Initial load takes time. Please wait...</Typography>
                 </Grid>
             </Grid> : (
                 <div className={classes.container}>
