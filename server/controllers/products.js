@@ -10,6 +10,16 @@ export const fetchProducts = async (req, res) => {
     }
 }
 
+export const fetchProductByID = async (req, res) => {
+    try {
+        const { id: _id } = req.params;
+        const product = await Products.findById(_id);
+        res.status(200).json(product);
+    } catch (error) {
+        res.status(404).json({ message: error });
+    }
+}
+
 export const createProduct = async (req, res) => {
     const product = req.body;
     const newProduct = new Products({...product, creator: req.userId, createdAt: new Date().toISOString() }); 

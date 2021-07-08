@@ -1,10 +1,12 @@
 import express from 'express';
-import { fetchProducts, createProduct, deleteProduct, updateProduct, likeProduct } from '../controllers/products.js';
+import { fetchProducts, fetchProductByID, createProduct, deleteProduct, updateProduct, likeProduct } from '../controllers/products.js';
 import auth from '../middleware/auth.js';
 
 const router = express.Router();
 
 router.get('/', fetchProducts);
+
+router.get('/:id', fetchProductByID);
 
 router.post('/', auth, createProduct);
 

@@ -90,7 +90,7 @@ const App = () => {
                     <Route path="/register" exact component={Register} />
                     <Route path="/" exact component={() => (<Home searchResult={searchResult} currentCat={currentCat} user={user} setCurrentId={setCurrentId} prefersDarkMode={prefersDarkMode} setCurrentBlog={setCurrentBlog}/>)} />
                     <Route path="/form" exact component={() => (<Form user={user} setCurrentId={setCurrentId} currentId={currentId} />)} />
-                    <Route path="/blog" exact component={() => (<BlogExpanded currentBlog={currentBlog} setCurrentBlog={setCurrentBlog} user={user} />)} />
+                    <Route path="/blog/:id" exact component={() => (<BlogExpanded currentBlog={currentBlog} setCurrentBlog={setCurrentBlog} user={user} />)} />
                 </Switch>
             </Container>
             <Footer />

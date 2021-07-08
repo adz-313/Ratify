@@ -94,7 +94,7 @@ const Blog = ({ user, blog, setCurrentId, prefersDarkMode, setCurrentBlog }) => 
                     <FavoriteIcon className={classes.favIcon}/>    
                 </IconButton>
                 <Typography>Like &nbsp;{blog.likes.length}</Typography>
-                <Button className={classes.readMore} color="primary" component={Link} to='/blog' onClick={() => setCurrentBlog(blog._id)} >Read more</Button>
+                <Button className={classes.readMore} color="primary" component={Link} to={`/blog/${blog._id}`}>Read more</Button>
             </CardActions>
             
         </Card>

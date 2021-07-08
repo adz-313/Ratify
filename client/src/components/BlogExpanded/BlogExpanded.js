@@ -5,6 +5,7 @@ import Moment from 'moment';
 import ReactMarkdown from 'react-markdown';
 import { useHistory } from 'react-router-dom';
 import {Bar} from 'react-chartjs-2';
+import { useParams } from 'react-router-dom';
 
 import useStyles from './styles';
 import TopPicks from '../TopPicks/TopPicks';
@@ -26,11 +27,18 @@ const BlogExpanded = ({ user, currentBlog, setCurrentBlog }) => {
         }
       ]
   });
+
+  const params = useParams();
+
   const history = useHistory();
 
-  const blogToEdit = useSelector((state) => currentBlog ? state.products.find((p) => p._id === currentBlog) : null);
+  const blogFromState = useSelector((state) => state.products.find((p) => p._id === params.id));
 
-  const reviews = useSelector((state) => state.reviews.filter(rev => rev.productId === currentBlog));
+  console.log(blogFromState)
+
+  //useEffect(useSelector((state) => state.products.map((p) => console.log(p))),[])
+
+  const reviews = useSelector((state) => state.reviews.filter(rev => rev.productId === params.id));
    
   let userData = reviews.slice(0);
   
@@ -57,12 +65,8 @@ const BlogExpanded = ({ user, currentBlog, setCurrentBlog }) => {
   const [editReview, setEditReview] = useState(null);
 
   useEffect(() => {
-    if (blogToEdit) {
-      setBlog(blogToEdit);
-    } else {
-      history.push('/');
-    }
-  }, [blogToEdit]);
+    if(blogFromState) setBlog(blogFromState)
+  }, []);
 
   const [blog, setBlog] = useState({
     productName: '',
@@ -96,7 +100,7 @@ const BlogExpanded = ({ user, currentBlog, setCurrentBlog }) => {
               <ReactMarkdown allowedElements={["h1", "p", "h2", "h3", "hr", "strong", "em", "ul", "ol", "li" ]}  children={blog.description} />
           </Grid>
           <Grid item lg={4} md={12} sm={12} className={classes.topPicks}>
-              <Typography variant="h4" className={classes.header} >Top Picks</Typography>
+              <Typography variant="h4" className={classes.header}>Top Picks</Typography>
               <TopPicks setCurrentBlog={setCurrentBlog} />
           </Grid>
       </Grid>

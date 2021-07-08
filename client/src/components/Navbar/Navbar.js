@@ -82,7 +82,7 @@ const Navbar = ({ user, setUser, setPrefersDarkMode, prefersDarkMode, drawerStat
                     {user ? 
                         <>
                             <Typography variant="body1" className={classes.mr}>{user.result.name}</Typography>
-                            <Avatar style={{ backgroundColor: avatarColor }} className={classes.mr} alt={user.result.name} src={user.result.imageUrl}>{user.result.name.charAt(0)}</Avatar>
+                            <Avatar style={{ backgroundColor: avatarColor }} className={classes.mr} alt={user.result.name} src={user.result.imageUrl}>{user.result?.name.charAt(0)}</Avatar>
                             <IconButton
                                 aria-label="more"
                                 aria-controls="long-menu"
