@@ -66,7 +66,7 @@ const BlogExpanded = ({ user, currentBlog, setCurrentBlog }) => {
 
   useEffect(() => {
     if(blogFromState) setBlog(blogFromState)
-  }, []);
+  }, [blogFromState]);
 
   const [blog, setBlog] = useState({
     productName: '',

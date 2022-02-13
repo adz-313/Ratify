@@ -1,23 +1,13 @@
 import React, { useEffect } from 'react';
 import { Typography, Container, Grid } from '@material-ui/core';
-import { useDispatch } from 'react-redux';
 
 import Blogs from '../Blogs/Blogs';
-import { getProducts } from '../../actions/products';
-import { fetchReviews } from '../../actions/reviews';
+
 import useStyles from './styles';
 import TopPicks from '../TopPicks/TopPicks';
 
 const Home = ({ user, setCurrentId, prefersDarkMode, setCurrentBlog, currentCat, searchResult }) => {
-    const dispatch = useDispatch();
-
     const classes = useStyles();
-
-    useEffect(() => {
-        dispatch(getProducts());
-        dispatch(fetchReviews());
-    }, [dispatch]);
-
     return (
         <Container>
             <Grid container>

@@ -4,6 +4,8 @@ import { Container, CssBaseline } from '@material-ui/core';
 import decode from 'jwt-decode';
 import { useDispatch } from 'react-redux';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { getProducts } from './actions/products';
+import { fetchReviews } from './actions/reviews';
 
 import Home from './components/Home/Home';
 import BlogExpanded from './components/BlogExpanded/BlogExpanded';
@@ -31,9 +33,15 @@ const App = () => {
         left: false,
     });
 
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getProducts());
+        dispatch(fetchReviews());
+    }, [dispatch]);
+
     const location = useLocation();
 
-    const dispatch = useDispatch();
 
     const logout = () => {
         dispatch({ type: LOGOUT });
@@ -77,6 +85,7 @@ const App = () => {
             }
         },
     });
+   
 
     return (
         <>
