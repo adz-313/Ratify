@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux';
 import { Paper, Typography, Grid, Container, Button } from '@material-ui/core';
 import Moment from 'moment';
 import ReactMarkdown from 'react-markdown';
-import { useHistory } from 'react-router-dom';
 import {Bar} from 'react-chartjs-2';
 import { useParams } from 'react-router-dom';
 

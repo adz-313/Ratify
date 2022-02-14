@@ -85,6 +85,8 @@ const App = () => {
             }
         },
     });
+
+    useEffect(() => console.log('home'))
    
 
     return (

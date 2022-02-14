@@ -18,6 +18,7 @@ const Form = ({ user, currentId, setCurrentId }) => {
     const blogToEdit = useSelector((state) => currentId ? state.products.find((p) => p._id === currentId) : null);
 
     useEffect(() => {
+        console.log(user, currentId)
        if(blogToEdit) {
            setBlog(blogToEdit);
        }
