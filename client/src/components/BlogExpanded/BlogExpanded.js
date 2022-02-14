@@ -30,13 +30,9 @@ const BlogExpanded = ({ user, currentBlog, setCurrentBlog }) => {
 
   const params = useParams();
 
-  const history = useHistory();
+  const [isLoading, setIsLoading] = useState(true);
 
   const blogFromState = useSelector((state) => state.products.find((p) => p._id === params.id));
-
-  console.log(blogFromState)
-
-  //useEffect(useSelector((state) => state.products.map((p) => console.log(p))),[])
 
   const reviews = useSelector((state) => state.reviews.filter(rev => rev.productId === params.id));
    
@@ -65,7 +61,10 @@ const BlogExpanded = ({ user, currentBlog, setCurrentBlog }) => {
   const [editReview, setEditReview] = useState(null);
 
   useEffect(() => {
-    if(blogFromState) setBlog(blogFromState)
+    if(blogFromState) {
+      setBlog(blogFromState);
+      setIsLoading(false);
+    }
   }, [blogFromState]);
 
   const [blog, setBlog] = useState({
@@ -75,6 +74,8 @@ const BlogExpanded = ({ user, currentBlog, setCurrentBlog }) => {
     tags: '',
     selectedFile: ''
   });
+
+  if(isLoading) return <p>Loading...</p>
 
   return (
     <Container className={classes.container}>
